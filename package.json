@@ -2,7 +2,7 @@
   "name": "bitcoinjs-lib",
   "version": "3.3.0",
   "description": "Client-side Bitcoin JavaScript library",
-  "main": "./src/index.js",
+  "main": "./bin/index.js",
   "engines": {
     "node": ">=4.0.0"
   },
@@ -20,7 +20,8 @@
     "integration": "mocha test/integration/",
     "standard": "standard",
     "test": "npm run standard && npm run coverage",
-    "unit": "mocha"
+    "unit": "mocha",
+    "compile": "rm -rf bin; mkdir bin; browserify src/index.js > bin/bitcoinjs-lib.js"
   },
   "repository": {
     "type": "git",
